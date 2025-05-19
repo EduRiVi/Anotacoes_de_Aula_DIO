@@ -1,0 +1,32 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}",
+            "args": [
+                "0",
+                "0",
+                "false"
+            ]
+        },
+        {
+            "type": "java",
+            "name": "User",
+            "request": "launch",
+            "mainClass": "dio.tests.User",
+            "projectName": "TesteTerminal_1c12606",
+            "args": [
+                "10",
+                "20",
+                "false"
+            ]
+            
+        }
+    ]
+}

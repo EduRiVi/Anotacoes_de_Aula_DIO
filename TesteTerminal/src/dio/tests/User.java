@@ -1,6 +1,7 @@
+package dio.tests;
 public class User {
     public static void main(String[] args) {
-        Television tv = new Television(5, 10, false);
+        Television tv = new Television(Integer.parseInt(args[0]), Integer.parseInt(args[1]), Boolean.parseBoolean(args[2]));
         
         tv.turnOn();
         tv.increaseVolume();

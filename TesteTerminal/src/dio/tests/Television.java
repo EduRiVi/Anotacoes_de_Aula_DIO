@@ -1,3 +1,4 @@
+package dio.tests;
 /**
  * <h1>Television</h1>
  * The Television class simulates a simple television with functionalities to turn it on/off, change channels, and adjust volume.
