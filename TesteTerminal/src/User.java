@@ -1,5 +1,3 @@
-package dio_class.tests;
-
 public class User {
     public static void main(String[] args) {
         Television tv = new Television(5, 10, false);
@@ -11,5 +9,7 @@ public class User {
         tv.previousChannel();
         tv.decreaseVolume();
         tv.turnOff();
+
+        tv.showStatus();
     }
 }
