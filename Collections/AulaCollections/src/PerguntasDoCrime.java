@@ -1,64 +1,50 @@
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
 public class PerguntasDoCrime {
     
     private static Scanner scanner = new Scanner(System.in);
-    
+    static Integer soma = 0;
     public static void main(String[] args) {
-        
-        List<Integer> respostas = new ArrayList<>();
-        
+
+        List<String> respostas = new ArrayList<>();
+
         System.out.println("Telefonou para a vitima?");
-        respostas.add(aguardarRespoosta());
-
-        System.out.println("Esteve no local do crime?");
-        respostas.add(aguardarRespoosta());
+         respostas.add(scanner.next().substring(0,1));
+         
+         System.out.println("Esteve no local do crime?");
+         respostas.add(scanner.next().substring(0,1));
+         
+         System.out.println("Mora perto da vitima?");
+         respostas.add(scanner.next().substring(0,1));
+         
+         System.out.println("Devia para a vitima?");
+         respostas.add(scanner.next().substring(0,1));
+         
+         System.out.println("Ja trabalhou com a vitima?");
+         respostas.add(scanner.next().substring(0,1));
+         
+         respostas.stream().filter(r -> r.equalsIgnoreCase("s")).forEach(temp -> soma++);
         
-        System.out.println("Mora perto da vitima?");
-        respostas.add(aguardarRespoosta());
-        
-        System.out.println("Devia para a vitima?");
-        respostas.add(aguardarRespoosta());
-        
-        System.out.println("Ja trabalhou com a vitima?");
-        respostas.add(aguardarRespoosta());
-
-        Iterator<Integer> iterator = respostas.iterator();
-
-        Integer soma = 0;
-        while(iterator.hasNext()) soma += iterator.next();
-        if (soma == 0) System.out.println("Você é inocente.");
-        else if (soma <= 2) System.out.println("Você é suspeto(a).");
-        else if (soma <= 4) System.out.println("Você é cúmplice.");
-        else System.out.println("Você é assassino(a).");
+         if (soma == 0) System.out.println("Você é inocente.");
+         else if (soma <= 2) System.out.println("Você é suspeito(a).");
+         else if (soma <= 4) System.out.println("Você é cúmplice.");
+         else System.out.println("Você é assassino(a).");
          
     }
-
-    private static Integer aguardarRespoosta() {
-        boolean continuar = true;
-        String resposta = "";
-        while (continuar) {
-            resposta = scanner.next().substring(0,1);
-            switch (resposta) {
-                case "S", "s", "1":
-                    return 1;
-
-                case "N", "n", "0":
-                    return 0;
-                
-                case "q", "Q":
-                    continuar = false;
-                    System.out.println("Você saiu.");
-                    break;
-                default:
-                    System.out.println("Valor invalido. Digite novamente: ");
-                    break;
-            }
-        }
+/* 
+private static String aguardarRespoosta(String resposta) {
+    boolean continuar = true;
+    while (continuar) {
+        if(resposta.equalsIgnoreCase("q")) 
         System.exit(0);
-        return -1;
+        else if (resposta.equalsIgnoreCase("s") || resposta.equalsIgnoreCase("n"))
+        return resposta;
+        
+        System.out.println("Digite um valor valido (s/n)");
     }
+    return "";
+}
+*/
 }

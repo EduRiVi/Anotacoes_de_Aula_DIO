@@ -7,6 +7,7 @@ Gato 2 = nome: Simba, idade: 6, cor: tigrado
 Gato 3 = nome: Jon, idade: 12, cor: amarelo
 */
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
