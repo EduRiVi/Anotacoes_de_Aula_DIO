@@ -6,8 +6,6 @@ Gato 1 = nome: Jon, idade: 18, cor: preto
 Gato 2 = nome: Simba, idade: 6, cor: tigrado
 Gato 3 = nome: Jon, idade: 12, cor: amarelo
 */
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -17,7 +15,7 @@ import classes_resources.ComparatorIdade;
 import classes_resources.ComparatorNomeCorIdade;
 import classes_resources.Gato;
 
-public class ListOrdenada {
+public class GatoListOrdenada {
     public static void main(String[] args) {
 
         List<Gato> meusGatos = new ArrayList<>(){{
