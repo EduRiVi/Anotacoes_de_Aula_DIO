@@ -24,11 +24,13 @@ public class PopulacaoMap {
             put("CE", 9187103);
             put("RN", 3534265);
         }};
+        System.out.println(populacoesLink);
 
         Map<String, Integer> populacoesHash = new HashMap<>(populacoesLink);
         
         populacoesLink.replace("RN", 3534165);
-        
+        System.out.println(populacoesLink);
+
         if (!populacoesLink.containsKey("PB")) populacoesLink.put("PB", 4039277);
         
         System.out.println(populacoesLink.get("PE"));
