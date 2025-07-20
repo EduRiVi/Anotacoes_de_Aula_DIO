@@ -118,7 +118,7 @@ class Television {
      * 
      */
     public void nextChannel() {
-        changeChannel(channel + 1);
+        channel++;
     }
 
     /**
@@ -131,7 +131,7 @@ class Television {
      * @see #nextChannel()
      */
     public void previousChannel() {
-        changeChannel(channel - 1);
+        channel--;
     }
 
     /**
